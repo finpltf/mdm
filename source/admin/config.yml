@@ -10,11 +10,13 @@ collections:
   #yaml middleman data example
   - name: funds
     label: Фонд
-    format: yml
-    extension: yml
+    format: json-frontmatter
+    extension: json
     folder: data/funds/
     create: true
     slug: '{{fund}}'
+    encoding: "ascii"
+    clean_accents: true
     fields:
       - {label: Название, name: title, widget: string, required: true}
       - {label: Управляющая компания, name: company, widget: string, required: true}
