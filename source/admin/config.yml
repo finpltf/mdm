@@ -16,14 +16,25 @@ collections:
     create: true
     slug: '{{title}}'
     fields:
-      - {label: Title, name: title, widget: string, required: true}
+      - {label: Название, name: title, widget: string, required: true}
       - {label: Publish Date, name: date, widget: datetime}
-      - {label: Image, name: image, widget: image, required: true}
-
-      - {label: Weight, name: weight, widget: number}
-      - {label: Price, name: price, widget: number}
-      - {label: Body, name: body, widget: markdown}
-
+      - {label: Картинка, name: image, widget: image, required: true}
+      - {label: Вес, name: weight, widget: number}
+      - {label: Цена, name: price, widget: number}
+      - {label: Описалово, name: body, widget: markdown}
+  - name: funds
+    label: Фонд
+    format: yml
+    extension: yml
+    folder: data/funds/
+    create: true
+    slug: '{{fund}}'
+    fields:
+      - {label: Название, name: title, widget: string, required: true}
+      - {label: Управляющая компания, name: company, widget: string, required: true}
+      - {label: Дата формирования, name: date, widget: datetime}      
+      - {label: Стоимость пая, name: price, widget: number}
+      - {label: Описалово, name: body, widget: markdown}
 #markdown middleman blog example
   - name: blog
     label: Блог
