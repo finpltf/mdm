@@ -9,7 +9,7 @@ public_folder: /images/uploads
 collections:
   #yaml middleman data example
   - name: product
-    label: Product
+    label: Продукт
     format: yml
     extension: yml
     folder: data/products/
@@ -26,7 +26,7 @@ collections:
 
 #markdown middleman blog example
   - name: blog
-    label: Blog
+    label: Блог
     folder: source/posts/
     extension: .html.md
     format: frontmatter
@@ -57,10 +57,10 @@ collections:
             widget: markdown
 
   - name: settings
-    label: Settings
+    label: Настройки
     files:
       - file: data/settings/navigation.yml
-        label: Navigation
+        label: Меню
         name: navigation
         fields:
           - label: Navigation
@@ -70,17 +70,17 @@ collections:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string}
       - file: data/settings/units.yml
-        label: Units
+        label: Единицы измерения
         name: units
         fields:
-          - label: Currency
+          - label: Валюта
             name: currency
             widget: select
-            options: ['€', '$', '£']
-            default: '€'
+            options: ['Р','€', '$', '£']
+            default: 'Р'
 
-          - label: Weight
+          - label: Вес
             name: weight
             widget: select
-            options: ['kg', ' st', ' lb']
-            default: 'kg'
+            options: ['кг', ' st', ' lb']
+            default: 'кг'
