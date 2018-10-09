@@ -18,11 +18,11 @@ collections:
     encoding: "ascii"
     clean_accents: true
     fields:
-      - {label: Название, name: title, widget: string, required: true}
-      - {label: Управляющая компания, name: company, widget: string, required: true}
-      - {label: Дата формирования, name: date, widget: datetime}      
-      - {label: Стоимость пая, name: price, widget: number}
-      - {label: Описалово, name: body, widget: markdown}
+      - {label: Название, name: shortName, widget: string, required: true}
+      - {label: Управляющая компания, name: companyShortName, widget: string, required: true}
+      - {label: Дата формирования, name: dataDate, widget: datetime}      
+      - {label: Стоимость пая, name: navOne, widget: number}
+      - {label: Описалово, name: description, widget: markdown}
       
   - name: product
     label: Продукт
