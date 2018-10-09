@@ -8,6 +8,20 @@ public_folder: /images/uploads
 
 collections:
   #yaml middleman data example
+  - name: funds
+    label: Фонд
+    format: yml
+    extension: yml
+    folder: data/funds/
+    create: true
+    slug: '{{fund}}'
+    fields:
+      - {label: Название, name: title, widget: string, required: true}
+      - {label: Управляющая компания, name: company, widget: string, required: true}
+      - {label: Дата формирования, name: date, widget: datetime}      
+      - {label: Стоимость пая, name: price, widget: number}
+      - {label: Описалово, name: body, widget: markdown}
+      
   - name: product
     label: Продукт
     format: yml
@@ -22,19 +36,7 @@ collections:
       - {label: Вес, name: weight, widget: number}
       - {label: Цена, name: price, widget: number}
       - {label: Описалово, name: body, widget: markdown}
-  - name: funds
-    label: Фонд
-    format: yml
-    extension: yml
-    folder: data/funds/
-    create: true
-    slug: '{{fund}}'
-    fields:
-      - {label: Название, name: title, widget: string, required: true}
-      - {label: Управляющая компания, name: company, widget: string, required: true}
-      - {label: Дата формирования, name: date, widget: datetime}      
-      - {label: Стоимость пая, name: price, widget: number}
-      - {label: Описалово, name: body, widget: markdown}
+      
 #markdown middleman blog example
   - name: blog
     label: Блог
